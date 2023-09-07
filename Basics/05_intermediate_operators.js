@@ -5,6 +5,10 @@
 //Boolean values 
     //Boolean values are never written with quotes
 
+//Checking the datatype of a variable or a value
+    typeof 3 //number
+    typeof '3' //string 
+
 //OPERATORS
     //1. EQUALITY OPERATOR
     //In order for javascript to compare 2 different data types (ex. number and string), it must convert one type to another
@@ -32,9 +36,6 @@
         3 === '3' //false because type is not matching      
       */
 
-//Checking the datatype of a variable or a value
-    typeof 3 //number
-    typeof '3' //string 
 
      //3. INEQUALITY OPERATOR
      //Like the eqality operator, the inequality operator will convert data types of values while comparing
@@ -64,3 +65,54 @@
         7 >= '3' //true
         2 >= 3 //false
         '7' >= 9 //false
+    
+    //7. LESS THAN OPERATOR 
+    // Linke equality operator, it also Converts the datatype before comparing
+        2 < 5 //true
+        '3' < 7 //true
+        5 < 5 //false
+        3 < 2 //false
+        
+//LOGICAL OPERATORS 
+    //AND OPERATOR (&&)
+    // For testing more than one thing at a time
+    // Retruns true if both the operands are true
+    // Same effect could be achieved by nesting an if statement inside another if
+    const num = 7
+        if(num > 5){
+            if(num < 10){
+                return "yes"
+            }
+        }else{
+            return "no"
+        }
+    //It will only return yes if num is greater than 5 and less than 10
+
+    //Same logic can be written as: 
+        if(num > 5 && num < 10){
+            return "yes"
+        }
+        else{
+            return "no"
+        }
+    
+    // OR OPERATOR (||)
+    // Returns true if either of the condition(oprand) is true
+    // Location of the or operator symbon on keyboard is between backspace and enter key.
+    
+    if (num > 10) {
+        return "no"
+    } if(num  < 5){
+        return "no"
+    }else {
+        return "yes"
+    }
+    //Output: will return yes only if num is between 5 and 10  (5 and 10 included)
+    //Same logic can be written as 
+        if(num > 10 || num < 5){
+            return "no"
+        }
+        else{
+            return "yes"
+        }
+  
