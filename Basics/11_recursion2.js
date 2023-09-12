@@ -44,6 +44,7 @@
     that uses the variable i. This is because the stored function, will always refer to the value of the updated 
     global i variable.
     */
+    //using var
         var printNumTwo
         for(var k = 0; k<5; k++){
             if(k == 3){
@@ -52,4 +53,16 @@
                 }
             }
         } 
-        console.log(printNumTwo())//Output: 5
+        //console.log(printNumTwo())//Output: 5
+
+    //using let
+        let printNumberTwo
+        for(let i = 0; i<5; i++){
+            if(i === 2){
+                printNumberTwo = function(){
+                    return i
+                }
+            }
+        }
+        console.log(printNumberTwo())//Output: 2
+        console.log(i)//Output: 3
