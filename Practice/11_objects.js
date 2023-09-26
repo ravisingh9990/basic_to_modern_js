@@ -85,3 +85,29 @@ const appUser = {}
 
 //Check if the object has the certain property or not, retruns true or false
         console.log(appUser.hasOwnProperty("issLoggedIn"));//true
+
+
+
+
+//Object Destructuring and JSON API
+
+
+const course = {
+        courseName : "Javascript",
+        coursePrice : "999",
+        courseInstructor : "ravi"
+    }
+    
+    //Accessing the object using .notation
+    
+    // console.log(course.courseName); 
+    
+    //Destructuring the object
+    
+    // const {courseName} = course
+    
+    //changing the name of the coursename property to only 'name' (alias)
+    const {courseName : name} = course
+    
+    console.log(name);
+    
